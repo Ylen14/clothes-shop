@@ -15,6 +15,11 @@ const defaultFilters: ProductFilters = {
   price: [0, 100],
 };
 
+const categories = ["Perfume", "Trousers", "Shoe", "Handbag", "Hat", "Thermos"];
+const colors = ["blue", "yellow", "green", "blue-dark"];
+const sizes = ["S", "M", "L", "XL", "XXL"];
+
+
 export const ProductFilter = () => {
   const dispatch = useDispatch();
   const { productFilters } = useSelector((state: RootState) => state.ui);
@@ -34,36 +39,65 @@ export const ProductFilter = () => {
     dispatch(onSetFilters(filters));
   };
 
+<<<<<<< HEAD
+    const filtersMap = values.categories.map((category: string) => ({
+      name: 'Category', value: category
+    }))
+    dispatch(onSetFilters(filtersMap))
+  }
+=======
   const handleReset = () => {
     form.resetFields();
     dispatch(onClearAllFilters());
   };
+>>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
+
 
   return (
     <div className="product-filter">
+<<<<<<< HEAD
+      <Form onValuesChange={(values) => handleFilter(values)}>
+=======
       <Form
         form={form}
         initialValues={defaultFilters}
         onValuesChange={(_, allValues) => handleFilter(allValues)}
       >
+>>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
         <div className="filter-section">
           <h3>Categories</h3>
           <Form.Item name="categories">
             <Checkbox.Group>
               <Space direction="vertical">
-                <Checkbox value="Perfume">Perfume</Checkbox>
-                <Checkbox value="Trousers">Trousers</Checkbox>
-                <Checkbox value="Shoe">Shoe</Checkbox>
-                <Checkbox value="Handbag">Handbag</Checkbox>
-                <Checkbox value="Hat">Hat</Checkbox>
-                <Checkbox value="Thermos">Thermos</Checkbox>
+                {categories.map((category) => (
+                  <Checkbox key={category} value={category}>
+                    {category}
+                  </Checkbox>
+                ))}
               </Space>
             </Checkbox.Group>
           </Form.Item>
         </div>
+<<<<<<< HEAD
+
+        
+=======
+>>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
         <div className="filter-section">
           <h3>Color</h3>
+          <Form.Item name="color">
           <div className="color-options">
+<<<<<<< HEAD
+            <Radio.Group defaultValue="blue">
+              {colors.map((color) => (
+                <Radio.Button
+                  key={color}
+                  value={color}
+                  className={`color-circle ${color}`}
+                />
+              ))}
+            </Radio.Group>
+=======
             <Form.Item name="color">
               <Radio.Group>
                 <Radio.Button value="blue" className="color-circle blue" />
@@ -75,12 +109,25 @@ export const ProductFilter = () => {
                 />
               </Radio.Group>
             </Form.Item>
+>>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
           </div>
+          </Form.Item>
         </div>
 
         <div className="filter-section">
           <h3>Size</h3>
           <Form.Item name="size">
+<<<<<<< HEAD
+          <Radio.Group defaultValue="S" buttonStyle="solid">
+            <Space className="size-options">
+              {sizes.map((size) => (
+                <Radio.Button key={size} value={size} className="size-button">
+                  {size}
+                </Radio.Button>
+              ))}
+            </Space>
+          </Radio.Group>
+=======
             <Radio.Group buttonStyle="solid">
               <Space className="size-options">
                 <Radio.Button value="S" className="size-button">
@@ -100,11 +147,13 @@ export const ProductFilter = () => {
                 </Radio.Button>
               </Space>
             </Radio.Group>
+>>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
           </Form.Item>
         </div>
 
         <div className="filter-section">
           <h3>Price</h3>
+          <Form.Item name="price">
           <div className="price-slider">
             <Form.Item name="price">
               <Slider
@@ -119,6 +168,7 @@ export const ProductFilter = () => {
               />
             </Form.Item>
           </div>
+          </Form.Item>
         </div>
         <div className="filter-actions">
           <Button onClick={handleReset} type="default" block>

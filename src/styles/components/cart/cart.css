@@ -1,0 +1,127 @@
+.cart-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .cart-item {
+    display: flex;
+    align-items: center;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+  }
+  
+  .cart-item-image {
+    width: 80px;
+    height: 80px;
+    background-color: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 16px;
+  }
+  
+  .cart-item-image img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+  
+  .cart-item-details {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .cart-item-price {
+    width: 100px;
+    text-align: right;
+    margin: 0 16px;
+  }
+  
+  .cart-item-quantity {
+    display: flex;
+    align-items: center;
+    margin: 0 16px;
+  }
+  
+  .quantity-control {
+    display: flex;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .quantity-button {
+    border: none;
+    background: transparent;
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    padding: 0;
+    margin-top: -5px;
+  }
+  
+  .quantity-input {
+    flex: 1;
+    text-align: center;
+    padding: 0 8px;
+    min-width: 30px;
+    font-size: 14px;
+    line-height: 32px;
+  }
+  
+  .cart-item-remove {
+    margin-left: 8px;
+    background-color: #F6F6F6;
+  }
+  
+  .color-circle {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+  }
+  
+  .color-circle.black {
+    background-color: #000;
+  }
+  
+  .color-circle.gray {
+    background-color: #ccc;
+  }
+  
+  .order-summary {
+    border-radius: 3px;
+    margin-left:  100px;
+    width: 341px;
+    height: 430px;
+  }
+  
+  .summary-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+  
+  .summary-row.total {
+    font-size: 18px;
+  }
+  
+  .checkout-button {
+    margin-top: 16px;
+    height: 48px;
+    font-size: 16px;
+    background-color: #0E1422;
+  }
+  
+  .continue-shopping {
+    margin-top: 12px;
+    font-weight: 500;
+  }
+  

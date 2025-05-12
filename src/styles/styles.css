@@ -18,3 +18,5 @@
 
 @import url('./components/filters/FiltersHeader.css');
 @import url('./components/sidebar-de-filtros/sidebar-de-filtro.css');
+
+@import url('./components/cart/cart.css');

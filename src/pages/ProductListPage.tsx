@@ -1,12 +1,17 @@
-import { ProductList } from "../components/listing/productlist/ProductList";
-import { FilterHeader } from "../components/filters/FilterHeader";
+
+import { ProductList } from "../components/listing/productlist/ProductList"; // Ajusta la ruta si es diferente
+import { products } from "../components/listing/productlist/ProductListData";
+import { useEffect, useState } from "react";
 import { Col, Row } from "antd";
-import { ProductFilter } from "../components/filters/ProductFilter";
-import { useDispatch, useSelector } from "react-redux";
-import { selectFilteredProducts } from "../store/products/productSlice";
+import { useSelector } from "react-redux";
 import { RootState } from "../store/store";
-import { formatFiltersForTags } from "../helpers/formatFiltersForTags";
-import { onRemoveFilter, onSortBy, Tag } from "../store/ui/uiSlice";
+import { ProductFilter } from "../components/Filters/ProductFilter";
+import { FilterHeader } from "../components/Filters/FilterHeader";
+
+export type Filter = {
+  name: string;
+  value: string;
+};
 
 export const ProductListPage = () => {
   const dispatch = useDispatch()

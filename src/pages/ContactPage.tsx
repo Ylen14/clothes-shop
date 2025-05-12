@@ -1,6 +1,7 @@
+import { CartPage } from "../components/cart/cart"
 
 export const ContactPage = () => {
   return (
-    <div>Contac page</div>
+    <CartPage></CartPage>
   )
 }

@@ -39,31 +39,19 @@ export const ProductFilter = () => {
     dispatch(onSetFilters(filters));
   };
 
-<<<<<<< HEAD
-    const filtersMap = values.categories.map((category: string) => ({
-      name: 'Category', value: category
-    }))
-    dispatch(onSetFilters(filtersMap))
-  }
-=======
   const handleReset = () => {
     form.resetFields();
     dispatch(onClearAllFilters());
   };
->>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
 
 
   return (
     <div className="product-filter">
-<<<<<<< HEAD
-      <Form onValuesChange={(values) => handleFilter(values)}>
-=======
       <Form
         form={form}
         initialValues={defaultFilters}
         onValuesChange={(_, allValues) => handleFilter(allValues)}
       >
->>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
         <div className="filter-section">
           <h3>Categories</h3>
           <Form.Item name="categories">
@@ -78,16 +66,10 @@ export const ProductFilter = () => {
             </Checkbox.Group>
           </Form.Item>
         </div>
-<<<<<<< HEAD
-
-        
-=======
->>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
         <div className="filter-section">
           <h3>Color</h3>
           <Form.Item name="color">
           <div className="color-options">
-<<<<<<< HEAD
             <Radio.Group defaultValue="blue">
               {colors.map((color) => (
                 <Radio.Button
@@ -97,19 +79,6 @@ export const ProductFilter = () => {
                 />
               ))}
             </Radio.Group>
-=======
-            <Form.Item name="color">
-              <Radio.Group>
-                <Radio.Button value="blue" className="color-circle blue" />
-                <Radio.Button value="yellow" className="color-circle yellow" />
-                <Radio.Button value="green" className="color-circle green" />
-                <Radio.Button
-                  value="blue-dark"
-                  className="color-circle blue-dark"
-                />
-              </Radio.Group>
-            </Form.Item>
->>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
           </div>
           </Form.Item>
         </div>
@@ -117,7 +86,6 @@ export const ProductFilter = () => {
         <div className="filter-section">
           <h3>Size</h3>
           <Form.Item name="size">
-<<<<<<< HEAD
           <Radio.Group defaultValue="S" buttonStyle="solid">
             <Space className="size-options">
               {sizes.map((size) => (
@@ -127,27 +95,6 @@ export const ProductFilter = () => {
               ))}
             </Space>
           </Radio.Group>
-=======
-            <Radio.Group buttonStyle="solid">
-              <Space className="size-options">
-                <Radio.Button value="S" className="size-button">
-                  S
-                </Radio.Button>
-                <Radio.Button value="M" className="size-button">
-                  M
-                </Radio.Button>
-                <Radio.Button value="L" className="size-button">
-                  L
-                </Radio.Button>
-                <Radio.Button value="XL" className="size-button">
-                  XL
-                </Radio.Button>
-                <Radio.Button value="XXL" className="size-button">
-                  XXL
-                </Radio.Button>
-              </Space>
-            </Radio.Group>
->>>>>>> 199db46ea3f128ede938e99e2d57d5a8e9162423
           </Form.Item>
         </div>
 

@@ -1,91 +1,177 @@
 .product-details-container {
-    width: 1092px;
-    height: 574px;
-    margin: 184px auto 0 auto;
-    position: relative;
-  }
-  
-  .product-details {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    height: 100%;
-  }
-  
-  .product-details .ant-row {
-    margin-bottom: 32px;
-  }
-  
-  .product-details .ant-col {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  
-  .product-image-background {
-    width: 534px;
-    height: 574px;
-    background-color: #f0f0f0;
-    border-radius: 5px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .product-image {
-    width: 288px;
-    height: 404px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .product-image-img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .color-options button {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .size-options button {
-    margin-top: 8px;
-  }
-  
-  .quantity-options {
-    margin-top: 8px;
-  }
-  
-  .add-to-cart-button {
-    width: 284px;
-    height: 44px;
-    border-radius: 4px;
-    padding: 12px 24px;
-    gap: 6px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #0E1422;
-    border: none;
-    color: white;
-    font-weight: 500;
-    margin-top: 16px;
-  }
-  
-  .add-to-cart-button:hover {
-    background-color: #1c2330;
-  }
-  
-  .shipping-info {
-    margin-top: 8px;
-    font-size: 0.875rem;
-    text-align: center;
-  }
-  
+  width: 1092px;
+  height: 574px;
+  margin: 184px auto 0 auto;
+  position: relative;
+}
+
+.product-details {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  height: 100%;
+}
+
+.product-details .ant-row {
+  margin-bottom: 32px;
+}
+
+.product-details .ant-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.product-image-background {
+  width: 534px;
+  height: 574px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image {
+  width: 288px;
+  height: 404px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.color-options button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+}
+
+.size-options button {
+  margin-top: 8px;
+}
+
+.quantity-options {
+  margin-top: 8px;
+}
+
+.add-to-cart-button {
+  width: 284px;
+  height: 44px;
+  border-radius: 4px;
+  padding: 12px 24px;
+  gap: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #0E1422;
+  border: none;
+  color: white;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.add-to-cart-button:hover {
+  background-color: #1c2330;
+}
+
+.cart-buttons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 16px;
+  justify-content: flex-start;
+}
+
+.wishlist-button {
+  width: 44px;
+  height: 44px;
+  border: 1px solid #d9d9d9;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shipping-info {
+  margin-top: 12px;
+  font-size: 14px;
+  color: #6b7280;
+  display: flex;
+  justify-content: center;
+}
+
+.status-line {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 4px 12px;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.review-pill .star {
+  color: #5C5F6A;
+  margin-right: 6px;
+  font-size: 14px;
+}
+
+.stock-pill {
+  background-color: #E6E7E8;
+  color: #5C5F6A;
+}
+
+.product-image .ant-carousel,
+.product-image .ant-carousel .slick-slider,
+.product-image .ant-carousel .slick-list,
+.product-image .ant-carousel .slick-track,
+.product-image .ant-carousel .slick-slide {
+  width: 100%;
+  height: 100%;
+}
+
+.product-image .ant-carousel .slick-slide div {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-image .ant-carousel .slick-slide img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.product-image .ant-carousel .slick-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+.product-image .ant-carousel .slick-dots li button {
+  background: #0c0c0c;
+}
+
+.product-image .ant-carousel .slick-dots li.slick-active button {
+  background: #000;
+}
+
+
